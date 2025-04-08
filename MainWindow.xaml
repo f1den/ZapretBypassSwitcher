@@ -1,0 +1,44 @@
+﻿<Window x:Class="BypassSwitcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BypassSwitcher"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="Zapret Bypass Switcher By N[i]ghtly" Height="450" Width="270" 
+        AllowsTransparency="True"
+        Background="#11FFFFFF"
+        DragOver="Window_DragOver" 
+        MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid>
+            <Border Background="Transparent" Margin="0,0,0,432">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Background="Transparent" BorderThickness="0" Content="🗕" Click="MinimizeButton_Click" Width="18" Height="18" VerticalContentAlignment="Top"/>
+                    <Button Background="Transparent" BorderThickness="0" Content="✕" Click="CloseButton_Click" Width="18" Height="18" VerticalContentAlignment="Top"/>
+                </StackPanel>
+            </Border>
+            <Label Content="Zapret Bypass Switcher By N[i]ghtly" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28" Width="234" Margin="0,-3,0,0" FontFamily="Corbel" FontSize="14" Foreground="#FFFFFFFF" />
+            <Separator HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="1" Background="AliceBlue" Width="270"/>
+        </Grid>
+        <Label Content="1. Положи exe в папку с zapret" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Width="250" Foreground="#FFFFFFFF"/>
+        <Label Content="2. Выбери обход из списка ниже" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top" Width="250" Foreground="#FFFFFFFF"/>
+        <Label Content="3. Примени обход и не еби мозг" HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top" Width="250" Foreground="#FFFFFFFF"/>
+
+        <ComboBox x:Name="BypassTypeComboBox" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Width="223" Height="22" SelectionChanged="BypassTypeComboBox_SelectionChanged">
+            <ComboBoxItem Content="general.bat" IsSelected="True"/>
+        </ComboBox>
+
+        <Button x:Name="RefreshButton" HorizontalAlignment="Left" Margin="238,149,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="RefreshButton_Click">
+            <Image Source="/refresh.png" Stretch="Fill"/>
+        </Button>
+
+        <Button x:Name="ApplyBypassButton" Content="Применить обход" HorizontalAlignment="Center" Margin="0,199,0,0" VerticalAlignment="Top" Width="250" Click="ApplyBypassButton_Click" Height="31"/>
+
+        <CheckBox x:Name="StartBypassCheckBox" Content="Запускать обход с программой" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Click="StartBypassCheckBox_Click" Foreground="#FFFFFFFF"/>
+    </Grid>
+</Window>

@@ -1,0 +1,4 @@
+# exclude large files and builds
+bin
+obj
+.vs
