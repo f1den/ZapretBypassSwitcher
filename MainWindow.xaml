@@ -14,7 +14,7 @@
         DragOver="Window_DragOver" 
         MouseDown="Window_MouseDown"
         Loaded="Window_Loaded">
-    <Grid>
+    <Grid Background="#992B2B2B">
         <Grid>
             <Border Background="Transparent" Margin="0,0,0,432">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
