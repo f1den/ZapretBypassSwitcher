@@ -46,7 +46,7 @@ namespace BypassSwitcher
         }
 
         private void StartBypassCheckBox_Click(object sender, RoutedEventArgs e) {
-            string value = StartBypassCheckBox.IsChecked.ToString();
+            string value = StartBypassCheckBox.IsChecked.ToString()!;
             iniReader.WriteValue("Settings", "RunOnLoad", value);
         }
 
@@ -88,7 +88,7 @@ namespace BypassSwitcher
 
         private void ApplyBypassButton_Click(object sender, RoutedEventArgs e) {
             if (BypassTypeComboBox.SelectedItem is ComboBoxItem selectedItem) {
-                string fileName = selectedItem.Content.ToString();
+                string fileName = selectedItem.Content.ToString()!;
                 string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string filePath = System.IO.Path.Combine(exeDirectory, fileName);
 
@@ -110,7 +110,7 @@ namespace BypassSwitcher
 
         private void StartLastSelectedBat() {
             if (BypassTypeComboBox.SelectedItem is ComboBoxItem selectedItem) {
-                string fileName = selectedItem.Content.ToString();
+                string fileName = selectedItem.Content.ToString()!;
                 string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string filePath = System.IO.Path.Combine(exeDirectory, fileName);
 
